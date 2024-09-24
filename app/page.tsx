@@ -1,6 +1,5 @@
 "use client";
-import Script from "next/script";
-import { useState, useEffect, SetStateAction } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [nrlaUserId, setNrlaUserId] = useState("");
