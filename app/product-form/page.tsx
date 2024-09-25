@@ -44,8 +44,8 @@ export default function Home(): JSX.Element {
   }, [nrlaUserId]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
-      <div className="p-8 bg-gray-200 rounded-lg shadow-lg w-5/12 max-w-5/12">
+    <div className="flex items-center justify-center min-h-screen bg-white py-8 px-4">
+      <div className="p-8 bg-gray-200 rounded-lg shadow-lg w-full max-w-lg overflow-auto">
         <label
           htmlFor="nrlaId"
           className="block text-lg font-medium text-gray-700"
@@ -63,7 +63,6 @@ export default function Home(): JSX.Element {
         <div className="text-lg text-gray-700 mt-2 mb-6">
           Current ID: {nrlaUserId}
         </div>
-        {/* Form container where the JotForm will be injected */}
         <div id="jotformContainer" ref={formRef}></div>
       </div>
     </div>

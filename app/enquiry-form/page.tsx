@@ -13,7 +13,6 @@ export default function Home() {
     const hiddenInput = form.querySelector(
       'input[name="nrla_membership_id"]'
     ) as HTMLInputElement;
-    console.log("hiddenInput", hiddenInput);
     if (hiddenInput) {
       hiddenInput.value = nrlaUserId;
       hiddenInput.dispatchEvent(new Event("change"));
@@ -46,8 +45,8 @@ export default function Home() {
   }, [nrlaUserId]); // Reload the script whenever nrlaUserId changes
 
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
-      <div className="p-8 bg-gray-200 rounded-lg shadow-lg w-5/12 max-w-5/12">
+    <div className="flex items-center justify-center min-h-screen bg-white py-8 px-4">
+      <div className="p-8 bg-gray-200 rounded-lg shadow-lg w-full max-w-lg overflow-auto">
         <label
           htmlFor="nrlaId"
           className="block text-lg font-medium text-gray-700"
